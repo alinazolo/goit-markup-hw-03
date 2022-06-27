@@ -81,10 +81,15 @@ body {
 .section:nth-child(even) {
     padding-top: 94px;
 }
+
+.section.portfolio {
+    padding-top: 94px;
+}
 .container {
     width: 100%;
-    max-width: 1202px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 /* Header */
 .header {
@@ -204,12 +209,16 @@ text-align: center;
 }
 
 /* Advantage */
-
-.items-advantage {
+.item-advantage {
+    width: 270px;
+}
+.items-advantage,
+.items-about {
     display: flex
 }
 
-.item-advantage:not(:first-child) {
+.item-advantage:not(:first-child),
+.item-about:not(:first-child) {
     margin-left: 30px;
   }
 
@@ -234,6 +243,7 @@ text-align: center;
 }
 
 /* Abou us */
+
 .title-about {
   margin-bottom: 50px;
   font-size: 36px;
@@ -244,21 +254,32 @@ text-align: center;
 
 
 }
-
-.team {
-    background-color: var(--primary-color);
-    
+.container-portfolio {
 }
 
+.team {
+    background-color: var(--primary-color);   
+}
+
+.items-team{
+    display: flex;
+    
+
+}
 .item-team {
-    min-width: 270px;
     background-color: #FFFFFF;
     text-align: center;
     letter-spacing: 0.03em;
-    
-
+    width: 270px;
 }
+
+.item-team:not(:first-child){
+    margin-left: 30px;
+}
+
 .title-name {
+margin: 30px auto 10px;
+
 font-size: 16px;
 font-weight: 500;
 line-height: 1.18;
@@ -266,12 +287,23 @@ color: var(--title-text-color);
 }
 
 .about {
+margin-bottom: 30px;
 font-size: 16px;
 line-height: 1.18;
 color: var(--main-text-color);
 
 }
 /* Portfolio */
+
+.flex-filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.item-filter:not(:first-child){
+    margin-left: 8px;
+}
 
 /* button */
 .filter {
@@ -296,10 +328,26 @@ cursor: pointer;
 }
 
 /* Project */
+
+.items-project {
+display: flex;
+flex-wrap: wrap;
+margin: -15px;
+}
+
 .item-project {
     border: 1px solid #EEEEEE;
+    width: 370px;
+    margin: 15px;
 }
+
+/* .img-title {
+    margin-bottom: 20px;
+} */
+
 .title-project {
+    margin: 20px 24px 4px;
+
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
@@ -307,6 +355,7 @@ cursor: pointer;
 }
 
 .type-project {
+margin: 0 24px 20px;
 font-size: 16px;
 line-height: 1.875;
 letter-spacing: 0.03em;
